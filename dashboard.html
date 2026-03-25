@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agent Dashboard | Lumina Staging</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+
+    <style>
+        /* Dashboard Specific Tweak */
+        .dashboard-main {
+            padding-top: 2rem;
+            padding-bottom: 5rem;
+        }
+        .stat-card {
+            border-left: 4px solid var(--accent-color);
+            padding: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .stat-icon {
+            font-size: 1.8rem;
+            opacity: 0.2;
+            color: var(--accent-color);
+        }
+        .inventory-card {
+            transition: var(--transition);
+            border: 1px solid rgba(0,0,0,0.05);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            height: auto;
+        }
+        .inventory-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--accent-color);
+        }
+        .inventory-img {
+            height: 180px;
+            width: 100%;
+            object-fit: cover;
+        }
+        .project-status-pill {
+            font-size: 0.7rem;
+            padding: 2px 8px;
+            border-radius: 99px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        .status-staging { background-color: #E0F2FE; color: #0369A1; }
+        .status-complete { background-color: #DCFCE7; color: #15803D; }
+        .status-cleaning { background-color: #FEF3C7; color: #B45309; }
+
+        .search-container {
+            position: relative;
+            max-width: 400px;
+        }
+        .search-container i {
+            position: absolute;
+            left: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-secondary);
+        }
+        .search-container .form-control {
+            padding-left: 35px;
+        }
+        
+        /* Dark Theme Specific Adjustment */
+        [data-theme="dark"] .inventory-card {
+            border-color: rgba(255,255,255,0.05);
+        }
+        [data-theme="dark"] .status-staging { background-color: rgba(3, 105, 161, 0.2); color: #7DD3FC; }
+        [data-theme="dark"] .status-complete { background-color: rgba(21, 128, 61, 0.2); color: #86EFAC; }
+        [data-theme="dark"] .status-cleaning { background-color: rgba(180, 83, 9, 0.2); color: #FCD34D; }
+    </style>
+</head>
+<body class="bg-surface h-100">
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="nav-brand">
+                <h2>Lumina<span>Staging</span></h2>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="before-after.html">Portfolio</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="dashboard.html" style="color: var(--accent-color)">Dashboard</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="rtl-toggle-btn btn btn-outline btn-sm" aria-label="Toggle RTL">🌐 RTL</button>
+                <button class="theme-toggle-btn" aria-label="Toggle Theme">🌙</button>
+                <div class="dropdown">
+                    <button class="btn btn-outline btn-sm d-flex align-items-center gap-2" type="button">
+                        <i class="fas fa-user-circle"></i> SJ
+                    </button>
+                </div>
+                <button class="mobile-menu-btn" aria-label="Open Menu">☰</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="min-vh-100 d-flex flex-column">
+        <!-- Dashboard Main Content -->
+        <main class="flex-grow-1 dashboard-main">
+            <div class="container">
+                <!-- Header Section -->
+                <div class="row align-items-center mb-5 fade-up">
+                    <div class="col-md-7">
+                        <span class="badge mb-2">Agent Portal</span>
+                        <h1 class="h2 mb-1">Agent Dashboard</h1>
+                        <p class="text-secondary mb-0">Welcome back, Sarah Jenkins. Managing 3 active properties.</p>
+                    </div>
+                    <div class="col-md-5 text-md-end mt-3 mt-md-0">
+                        <button class="btn btn-outline me-2"><i class="fas fa-file-invoice-dollar me-2"></i> Invoices</button>
+                        <a href="#booking" class="btn btn-primary"><i class="fas fa-plus me-2"></i> Book Staging</a>
+                    </div>
+                </div>
+
+                <!-- Stats Bar -->
+                <div class="row mb-5 fade-up stagger-container">
+                    <div class="col-md-3 mb-3 stagger-item">
+                        <div class="glass-card stat-card">
+                            <div>
+                                <p class="text-secondary text-sm mb-1">Active Projects</p>
+                                <h2 class="h3 mb-0">03</h2>
+                            </div>
+                            <i class="fas fa-home stat-icon"></i>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-3 stagger-item">
+                        <div class="glass-card stat-card">
+                            <div>
+                                <p class="text-secondary text-sm mb-1">Reserved Items</p>
+                                <h2 class="h3 mb-0">18</h2>
+                            </div>
+                            <i class="fas fa-couch stat-icon"></i>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-3 stagger-item">
+                        <div class="glass-card stat-card">
+                            <div>
+                                <p class="text-secondary text-sm mb-1">Messages</p>
+                                <h2 class="h3 mb-0">05</h2>
+                            </div>
+                            <i class="fas fa-envelope stat-icon"></i>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-3 stagger-item">
+                        <div class="glass-card stat-card">
+                            <div>
+                                <p class="text-secondary text-sm mb-1">Rewards Credit</p>
+                                <h2 class="h3 mb-0">$250</h2>
+                            </div>
+                            <i class="fas fa-star stat-icon"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <!-- Left: Catalog -->
+                    <div class="col-lg-8 mb-4">
+                        <div class="glass-card fade-up">
+                            <div class="border-bottom pb-4 mb-4">
+                                <h4 class="mb-3">Item Catalog</h4>
+                                <div class="row g-2">
+                                    <div class="col-md-7">
+                                        <div class="search-container">
+                                            <i class="fas fa-search"></i>
+                                            <input type="text" class="form-control" placeholder="Search furniture name or ID...">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-5">
+                                        <select class="form-control">
+                                            <option>Filter by Style</option>
+                                            <option>Minimalist Modern</option>
+                                            <option>Luxury Traditional</option>
+                                            <option>Coastal Chic</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row g-3">
+                                <!-- Item 1 -->
+                                <div class="col-md-4 mb-4">
+                                    <div class="inventory-card glass-card p-0">
+                                        <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&q=80&w=400" alt="Velvet Sofa" class="inventory-img">
+                                        <div class="p-3">
+                                            <h6 class="mb-1">Velvet Accent Sofa</h6>
+                                            <p class="text-xs text-secondary mb-3">Ref: #INV-9201</p>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <span class="text-xs text-secondary"><i class="fas fa-check-circle text-success me-1"></i> Available</span>
+                                                <button class="btn btn-primary btn-sm px-2 py-1" style="font-size: 0.7rem;">Reserve</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Item 2 -->
+                                <div class="col-md-4 mb-4">
+                                    <div class="inventory-card glass-card p-0">
+                                        <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&q=80&w=400" alt="Marble Table" class="inventory-img">
+                                        <div class="p-3">
+                                            <h6 class="mb-1">Aurelia Marble Table</h6>
+                                            <p class="text-xs text-secondary mb-3">Ref: #INV-4412</p>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <span class="text-xs text-secondary"><i class="fas fa-clock text-warning me-1"></i> In Use</span>
+                                                <button class="btn btn-outline btn-sm px-2 py-1" style="font-size: 0.7rem;" disabled>Notify Me</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Item 3 -->
+                                <div class="col-md-4 mb-4">
+                                    <div class="inventory-card glass-card p-0">
+                                        <img src="https://images.unsplash.com/photo-1616489953149-8f6f671c676c?auto=format&fit=crop&q=80&w=400" alt="Headboard" class="inventory-img">
+                                        <div class="p-3">
+                                            <h6 class="mb-1">King Tufted Headboard</h6>
+                                            <p class="text-xs text-secondary mb-3">Ref: #INV-3321</p>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <span class="text-xs text-secondary"><i class="fas fa-check-circle text-success me-1"></i> Available</span>
+                                                <button class="btn btn-primary btn-sm px-2 py-1" style="font-size: 0.7rem;">Reserve</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="text-center mt-4">
+                                <nav aria-label="Page navigation">
+                                    <ul class="pagination pagination-sm justify-content-center">
+                                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Side columns -->
+                    <div class="col-lg-4">
+                        <!-- Project Tracking -->
+                        <div class="glass-card mb-4 fade-up">
+                            <div class="d-flex justify-content-between align-items-center mb-4">
+                                <h4 class="mb-0">Property Status</h4>
+                                <a href="#" class="text-sm">View All</a>
+                            </div>
+                            
+                            <div class="project-list d-flex flex-column gap-3">
+                                <div class="p-3 border rounded bg-surface-darken position-relative">
+                                    <div class="d-flex justify-content-between mb-2">
+                                        <h6 class="mb-0">742 Evergreen Terrace</h6>
+                                        <span class="project-status-pill status-staging">Staging</span>
+                                    </div>
+                                    <div class="progress mb-2" style="height: 4px;">
+                                        <div class="progress-bar bg-primary" style="width: 75%"></div>
+                                    </div>
+                                    <div class="d-flex justify-content-between text-xs text-secondary">
+                                        <span>Installation Status</span>
+                                        <span>75% Complete</span>
+                                    </div>
+                                </div>
+
+                                <div class="p-3 border rounded">
+                                    <div class="d-flex justify-content-between mb-2">
+                                        <h6 class="mb-0">123 Ocean View Dr</h6>
+                                        <span class="project-status-pill status-cleaning">Cleaning</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between text-xs text-secondary">
+                                        <span>Scheduled Cleanup</span>
+                                        <span>Mar 30, 2026</span>
+                                    </div>
+                                </div>
+
+                                <div class="p-3 border rounded">
+                                    <div class="d-flex justify-content-between mb-2">
+                                        <h6 class="mb-0">Villa De La Torre</h6>
+                                        <span class="project-status-pill status-complete">Completed</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between text-xs text-secondary">
+                                        <span>Listing Status</span>
+                                        <span>Active (2 Weeks)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Consultation -->
+                        <div id="booking" class="glass-card fade-up" style="border-top: 4px solid var(--accent-color);">
+                            <h4 class="mb-3">Quick Consultation</h4>
+                            <p class="text-secondary text-sm mb-4">Request a walkthrough for your next listing.</p>
+                            <form>
+                                <div class="mb-3">
+                                    <label class="text-xs font-weight-600 mb-1">Property Address</label>
+                                    <input type="text" class="form-control form-control-sm" placeholder="Full address...">
+                                </div>
+                                <div class="mb-4">
+                                    <label class="text-xs font-weight-600 mb-1">Proposed Date</label>
+                                    <input type="date" class="form-control form-control-sm">
+                                </div>
+                                <button type="submit" class="btn btn-primary w-100">Schedule Request</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Site Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 mb-4">
+                        <h3 class="mb-3">Lumina<span>Staging</span></h3>
+                        <p>Elevating real estate through strategic design.</p>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <h4 class="mb-3">Connect</h4>
+                        <p class="text-sm mb-2">📍 123 Design Avenue, Suite 100</p>
+                        <p class="text-sm">📧 hello@luminastaging.com</p>
+                    </div>
+                    <div class="col-lg-4 col-md-6 text-lg-end">
+                        <p class="text-sm">&copy; 2026 Lumina Staging. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="assets/js/theme-toggle.js"></script>
+    <script src="assets/js/animations.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

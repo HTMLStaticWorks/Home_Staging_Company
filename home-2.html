@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Staging Company | Creative Agency Layout</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+
+    <style>
+        /* Modern split layout specific for home-2 */
+        .split-hero {
+            display: flex;
+            min-height: 100vh;
+            align-items: center;
+        }
+        .split-hero-content {
+            flex: 1;
+            padding: 4rem;
+        }
+        .split-hero-img {
+            flex: 1;
+            height: 100vh;
+            object-fit: cover;
+        }
+        @media (max-width: 991px) {
+            .split-hero {
+                flex-direction: column-reverse;
+                min-height: auto;
+            }
+            .split-hero-img {
+                width: 100%;
+                height: 50vh;
+            }
+            .split-hero-content {
+                padding: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar (Fixed Top) -->
+    <nav class="navbar position-fixed w-100 top-0 z-index-1000">
+        <div class="container">
+            <a href="index.html" class="nav-brand">
+                <h2>Lumina<span>Staging</span></h2>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="home-2.html" style="color: var(--accent-color)">Home 2</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="before-after.html">Before & After</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="rtl-toggle-btn btn btn-outline btn-sm me-1" style="font-size: 0.7rem; padding: 0.2rem 0.5rem;" aria-label="Toggle RTL">🌐 RTL</button>
+                <button class="theme-toggle-btn" aria-label="Toggle Theme">🌙</button>
+                <a href="login.html" class="btn btn-outline d-none d-md-inline-block">Login</a>
+                <a href="signup.html" class="btn btn-primary d-none d-md-inline-block">Signup</a>
+                <button class="mobile-menu-btn" aria-label="Open Menu">☰</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Split Hero Section -->
+    <section class="split-hero stagger-container bg-surface">
+        <div class="split-hero-content fade-up stagger-item">
+            <span class="badge mb-3">Est. 2018</span>
+            <h1 class="display-4 mb-4" style="font-family: var(--font-heading);">Designing spaces that sell at a premium.</h1>
+            <p class="text-secondary h5 mb-5 font-weight-normal max-w-md" style="line-height: 1.6;">Lumina brings architectural intent to life, turning vacant listings into aspirational homes.</p>
+            
+            <div class="d-flex gap-3 mb-5">
+                <a href="services.html" class="btn btn-primary btn-lg">Our Methods</a>
+                <a href="contact.html" class="btn btn-outline btn-lg">Book Consult</a>
+            </div>
+
+            <div class="row pt-5 mt-4 border-top">
+                <div class="col-6">
+                    <h3 class="display-6 m-0">21 Days</h3>
+                    <p class="text-secondary text-sm">Avg. Days on Market</p>
+                </div>
+                <div class="col-6">
+                    <h3 class="display-6 m-0">14%</h3>
+                    <p class="text-secondary text-sm">Avg. Over Asking Price</p>
+                </div>
+            </div>
+        </div>
+        <img src="assets/images/hero.jpg" alt="Interior Design" class="split-hero-img fade-up stagger-item">
+    </section>
+
+    <!-- Marquee / Partner Strip Placeholder -->
+    <div class="bg-primary text-white py-3 overflow-hidden">
+        <div class="container text-center">
+            <div class="d-flex justify-content-between text-sm uppercase" style="letter-spacing: 2px;">
+                <span class="opacity-50">Featured In:</span>
+                <span>ARCHITECTURAL DIGEST</span>
+                <span>ELLE DECOR</span>
+                <span>LUXURY REAL ESTATE</span>
+                <span>WSJ MANSION</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Featured Projects Grid -->
+    <section class="section-padding stagger-container">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-end mb-5 fade-up">
+                <div>
+                    <h2>Selected Works</h2>
+                    <p class="text-secondary m-0">A glimpse into our recent staging triumphs.</p>
+                </div>
+                <a href="before-after.html" class="text-primary font-weight-600">View All →</a>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-7 fade-up stagger-item">
+                    <div class="img-wrap position-relative h-100">
+                        <img src="assets/images/after-1.jpg" alt="Project 1" class="w-100 h-100 object-fit-cover rounded-lg" style="min-height: 400px;">
+                        <div class="position-absolute bottom-0 start-0 w-100 p-4" style="background: linear-gradient(transparent, rgba(0,0,0,0.8)); border-radius: 0 0 var(--radius-lg) var(--radius-lg);">
+                            <h3 class="text-white mb-1">Pacific Palisades Estate</h3>
+                            <a href="project-details.html" class="text-white opacity-75 text-sm uppercase">View Project</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-5 d-flex flex-column gap-4 fade-up stagger-item">
+                    <div class="img-wrap position-relative flex-grow-1">
+                        <img src="assets/images/room-1.jpg" alt="Project 2" class="w-100 h-100 object-fit-cover rounded-lg">
+                        <div class="position-absolute bottom-0 start-0 w-100 p-4" style="background: linear-gradient(transparent, rgba(0,0,0,0.8)); border-radius: 0 0 var(--radius-lg) var(--radius-lg);">
+                            <h4 class="text-white mb-0">Silverlake Modern</h4>
+                        </div>
+                    </div>
+                    <div class="glass-card bg-surface flex-grow-1 p-4 d-flex flex-column justify-content-center">
+                        <h3 class="mb-3">Ready to sell?</h3>
+                        <p class="text-secondary text-sm mb-4">Join hundreds of top-producing real estate agents who trust Lumina to elevate their listings.</p>
+                        <a href="contact.html" class="btn btn-outline align-self-start">Get a Quote</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h3 class="mb-3">Lumina<span>Staging</span></h3>
+                    <p>Elevating real estate through strategic design. We help sellers and agents maximize their property's potential and market value.</p>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-4">
+                    <h4 class="mb-3">Company</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="about.html">About Us</a></li>
+                        <li class="mb-2"><a href="services.html">Services</a></li>
+                        <li class="mb-2"><a href="before-after.html">Portfolio</a></li>
+                        <li class="mb-2"><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-4">
+                    <h4 class="mb-3">Resources</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="blog.html">Blog & Tips</a></li>
+                        <li class="mb-2"><a href="login.html">Client Login</a></li>
+                        <li class="mb-2"><a href="signup.html">Agent Signup</a></li>
+                        <li class="mb-2"><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-4 mb-4">
+                    <h4 class="mb-3">Connect</h4>
+                    <p class="mb-2">📍 123 Design Avenue, Suite 100</p>
+                    <p class="mb-2">📧 hello@luminastaging.com</p>
+                    <p class="mb-4">📞 (555) 123-4567</p>
+                    <div class="d-flex gap-2">
+                        <div class="bg-surface text-primary p-2 rounded" style="width: 38px; height: 38px; display: flex; align-items: center; justify-content: center; cursor: pointer;" aria-label="Instagram"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></div>
+                        <div class="bg-surface text-primary p-2 rounded" style="width: 38px; height: 38px; display: flex; align-items: center; justify-content: center; cursor: pointer;" aria-label="Facebook"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></div>
+                        <div class="bg-surface text-primary p-2 rounded" style="width: 38px; height: 38px; display: flex; align-items: center; justify-content: center; cursor: pointer;" aria-label="LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Lumina Staging. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="assets/js/theme-toggle.js"></script>
+    <script src="assets/js/animations.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

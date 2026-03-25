@@ -1,0 +1,25 @@
+/* Animations Setup */
+.fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.stagger-item {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+/* Base structural fixes to prevent overflow during animations */
+body {
+  overflow-x: hidden;
+}
+
+/* Ensure smooth image loads */
+img {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+img.loaded {
+  opacity: 1;
+}
