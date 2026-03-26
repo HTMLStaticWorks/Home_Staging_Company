@@ -1,18 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Staging Company | Creative Agency Layout</title>
     <link rel="icon" type="image/png" href="assets/images/logo.png">
 
-    
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
-    
-    <!-- Icons -->    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">    <!-- CSS -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- CSS -->
     <link rel="stylesheet" href="assets/css/bootstrap.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/dark.css">
@@ -25,24 +30,29 @@
             min-height: 100vh;
             align-items: center;
         }
+
         .split-hero-content {
             flex: 1;
             padding: 4rem;
         }
+
         .split-hero-img {
             flex: 1;
             height: 100vh;
             object-fit: cover;
         }
+
         @media (max-width: 991px) {
             .split-hero {
                 flex-direction: column-reverse;
                 min-height: auto;
             }
+
             .split-hero-img {
                 width: 100%;
                 height: 50vh;
             }
+
             .split-hero-content {
                 padding: 2rem;
             }
@@ -55,30 +65,46 @@
             overflow: hidden;
             transition: var(--transition);
         }
+
         .project-card .img-wrap {
             height: 100%;
             transition: var(--transition);
         }
-        .project-card.large { height: 600px; }
-        .project-card.small { height: 280px; }
-        .project-card.small.compact { height: 250px; }
-        
+
+        .project-card.large {
+            height: 600px;
+        }
+
+        .project-card.small {
+            height: 280px;
+        }
+
+        .project-card.small.compact {
+            height: 250px;
+        }
+
         .project-info {
             position: absolute;
             bottom: 0;
             left: 0;
             width: 100%;
-            background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, transparent 100%);
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, transparent 100%);
             z-index: 2;
             transition: var(--transition);
         }
-        .project-card:hover .img-wrap { transform: scale(1.05); }
-        .project-card:hover .project-info { padding-bottom: 3.5rem !important; }
+
+        .project-card:hover .img-wrap {
+            transform: scale(1.05);
+        }
+
+        .project-card:hover .project-info {
+            padding-bottom: 3.5rem !important;
+        }
 
         .badge-outline {
             display: inline-block;
             padding: 0.2rem 0.6rem;
-            border: 1px solid rgba(255,255,255,0.4);
+            border: 1px solid rgba(255, 255, 255, 0.4);
             border-radius: 99px;
             color: white;
             font-size: 0.65rem;
@@ -87,14 +113,15 @@
         }
 
         .btn-white-glass {
-            background: rgba(255,255,255,0.1);
+            background: rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(10px);
-            border: 1px solid rgba(255,255,255,0.2);
+            border: 1px solid rgba(255, 255, 255, 0.2);
             color: white;
             padding: 0.6rem 1.2rem;
             border-radius: var(--radius-md);
             font-size: 0.85rem;
         }
+
         .btn-white-glass:hover {
             background: white;
             color: var(--primary-color);
@@ -108,27 +135,36 @@
             opacity: 0.3;
             line-height: 1;
         }
+
         .process-step {
             padding: 2rem;
-            background: white;
+            background: var(--surface-color);
             border-radius: var(--radius-lg);
             transition: var(--transition);
-            box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+            border: 1px solid rgba(0, 0, 0, 0.05);
         }
+
+        [data-theme="dark"] .process-step {
+            border-color: rgba(255, 255, 255, 0.05);
+        }
+
         .process-step:hover {
             transform: translateY(-10px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
         }
 
         /* Package Cards */
         .package-card {
-            background: white;
+            background: var(--surface-color);
             border-radius: var(--radius-lg);
             transition: var(--transition);
         }
+
         .package-card:hover {
             transform: translateY(-5px);
         }
+
         .badge-accent {
             background: var(--accent-color);
             color: white;
@@ -142,16 +178,23 @@
         .package-card {
             display: flex !important;
             flex-direction: column !important;
-            background: white;
+            background: var(--surface-color);
             border-radius: var(--radius-lg);
             transition: var(--transition);
             height: 100%;
+            border: 1px solid rgba(0, 0, 0, 0.05);
         }
+
+        [data-theme="dark"] .package-card {
+            border-color: rgba(255, 255, 255, 0.05);
+        }
+
         .package-body {
             flex: 1 1 auto;
             display: flex;
             flex-direction: column;
-            text-align: center; /* Center everything */
+            text-align: center;
+            /* Center everything */
             align-items: center;
         }
 
@@ -160,13 +203,30 @@
             font-family: var(--font-heading);
             letter-spacing: -1px;
         }
-        .text-accent { color: var(--accent-color) !important; }
 
-        .max-w-sm { max-width: 500px; }
-        .max-w-md { max-width: 600px; }
-        .pb-6 { padding-bottom: 6rem; }
-        .mb-6 { margin-bottom: 4rem; }
-        .opacity-05 { opacity: 0.05; }
+        .text-accent {
+            color: var(--accent-color) !important;
+        }
+
+        .max-w-sm {
+            max-width: 500px;
+        }
+
+        .max-w-md {
+            max-width: 600px;
+        }
+
+        .pb-6 {
+            padding-bottom: 6rem;
+        }
+
+        .mb-6 {
+            margin-bottom: 4rem;
+        }
+
+        .opacity-05 {
+            opacity: 0.05;
+        }
 
         .tag-label {
             display: inline-block;
@@ -176,14 +236,17 @@
             font-size: 0.75rem;
             color: var(--text-secondary);
             font-weight: 500;
+            border: 1px solid rgba(0, 0, 0, 0.03);
         }
 
         .hover-scale {
             transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
         }
+
         .style-card:hover .hover-scale {
             transform: scale(1.1);
         }
+
         .transition-slow {
             transition: all 0.5s ease;
         }
@@ -192,33 +255,44 @@
         .img-reveal-wrap {
             position: relative;
         }
+
         .img-reveal-wrap::after {
             content: '';
             position: absolute;
             inset: 0;
-            background: linear-gradient(to top, rgba(0,0,0,0.2) 0%, transparent 40%);
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.2) 0%, transparent 40%);
             pointer-events: none;
         }
-        
+
         .section-padding {
-            padding: 8rem 0; /* Increased from 6rem */
+            padding: 8rem 0;
+            /* Increased from 6rem */
         }
-        
+
         @media (max-width: 768px) {
-            .section-padding { padding: 5rem 0; }
-            .col-lg-6, .col-lg-4 { margin-bottom: 2rem; } /* Fix touching on mobile */
+            .section-padding {
+                padding: 5rem 0;
+            }
+
+            .col-lg-6,
+            .col-lg-4 {
+                margin-bottom: 2rem;
+            }
+
+            /* Fix touching on mobile */
         }
 
         .shadow-premium {
-            box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
         }
-        
+
         /* Ensure text stands out on any background */
         .text-shadow-sm {
-            text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
         }
     </style>
 </head>
+
 <body>
     <!-- Navbar (Fixed Top) -->
     <nav class="navbar position-fixed w-100 top-0 z-index-1000">
@@ -236,9 +310,12 @@
                 <li><a href="dashboard.html">Dashboard</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <!-- Mobile Actions -->
-                <li class="mobile-view-only mt-3"><hr class="opacity-10"></li>
+                <li class="mobile-view-only mt-3">
+                    <hr class="opacity-10">
+                </li>
                 <li class="mobile-view-only"><a href="login.html"><i class="fas fa-sign-in-alt me-2"></i>Login</a></li>
-                <li class="mobile-view-only"><a href="signup.html" class="text-accent"><i class="fas fa-user-plus me-2"></i>Signup</a></li>
+                <li class="mobile-view-only"><a href="signup.html" class="text-accent"><i
+                            class="fas fa-user-plus me-2"></i>Signup</a></li>
                 <li class="mobile-view-only d-flex gap-3 mt-3">
                     <button class="rtl-toggle-btn btn btn-outline btn-sm w-100">🌐 RTL</button>
                     <button class="theme-toggle-btn btn btn-outline btn-sm w-100">🌙 Theme</button>
@@ -261,9 +338,11 @@
     <section class="split-hero stagger-container bg-surface">
         <div class="split-hero-content fade-up stagger-item">
             <span class="badge mb-3">Est. 2018</span>
-            <h1 class="display-4 mb-4" style="font-family: var(--font-heading);">Designing spaces that sell at a premium.</h1>
-            <p class="text-secondary h5 mb-5 font-weight-normal max-w-md" style="line-height: 1.6;">Lumina brings architectural intent to life, turning vacant listings into aspirational homes.</p>
-            
+            <h1 class="display-4 mb-4" style="font-family: var(--font-heading);">Designing spaces that sell at a
+                premium.</h1>
+            <p class="text-secondary h5 mb-5 font-weight-normal max-w-md" style="line-height: 1.6;">Lumina brings
+                architectural intent to life, turning vacant listings into aspirational homes.</p>
+
             <div class="d-flex gap-3 mb-5">
                 <a href="services.html" class="btn btn-primary btn-lg">Our Methods</a>
                 <a href="contact.html" class="btn btn-outline btn-lg">Book Consult</a>
@@ -286,7 +365,7 @@
     <!-- Marquee / Partner Strip Placeholder -->
     <div class="bg-primary text-white py-3 overflow-hidden">
         <div class="container text-center">
-            <div class="d-flex justify-content-between text-sm uppercase" style="letter-spacing: 2px;">
+            <div class="d-flex flex-wrap justify-content-center text-sm uppercase gap-3" style="letter-spacing: 2px;">
                 <span class="opacity-50">Featured In:</span>
                 <span>ARCHITECTURAL DIGEST</span>
                 <span>ELLE DECOR</span>
@@ -302,25 +381,32 @@
             <div class="text-center mb-6 fade-up">
                 <span class="badge mb-3">Our Visual Signature</span>
                 <h2 class="display-5" style="font-family: var(--font-heading);">The Lumina Design DNA</h2>
-                <p class="text-secondary max-w-sm mx-auto">We don't believe in one-size-fits-all. Every property demands a unique visual dialogue. Our staging is category-specific, designed to speak directly to the aspirational buyer.</p>
+                <p class="text-secondary max-w-sm mx-auto">We don't believe in one-size-fits-all. Every property demands
+                    a unique visual dialogue. Our staging is category-specific, designed to speak directly to the
+                    aspirational buyer.</p>
             </div>
 
             <div class="row g-5"> <!-- Increased gap from g-4 to g-5 -->
                 <!-- Style 1: Modern Minimalist -->
                 <div class="col-lg-6 fade-up stagger-item">
-                    <div class="style-card glass-card shadow-premium p-0 overflow-hidden h-100 border-0 position-relative">
+                    <div
+                        class="style-card glass-card shadow-premium p-0 overflow-hidden h-100 border-0 position-relative">
                         <div class="img-reveal-wrap overflow-hidden" style="height: 350px;">
-                            <img src="assets/images/style-minimalist.png" alt="Modern Minimalist" class="w-100 h-100 object-fit-cover transition-slow hover-scale">
+                            <img src="assets/images/style-minimalist.png" alt="Modern Minimalist"
+                                class="w-100 h-100 object-fit-cover transition-slow hover-scale">
                         </div>
                         <div class="p-5">
                             <div class="d-flex justify-content-between align-items-start mb-3">
                                 <div>
                                     <h3 class="mb-1 text-shadow-sm">Modern Minimalist</h3>
-                                    <p class="text-accent text-sm uppercase font-weight-600 mb-0" style="letter-spacing: 1px;">Precision & Light</p>
+                                    <p class="text-accent text-sm uppercase font-weight-600 mb-0"
+                                        style="letter-spacing: 1px;">Precision & Light</p>
                                 </div>
                                 <span class="badge-outline text-primary border-primary">Featured</span>
                             </div>
-                            <p class="text-secondary mb-4">Focusing on architectural clarity, this style uses precise lines, a monochromatic palette, and intentional negative space to create an atmosphere of effortless sophistication.</p>
+                            <p class="text-secondary mb-4">Focusing on architectural clarity, this style uses precise
+                                lines, a monochromatic palette, and intentional negative space to create an atmosphere
+                                of effortless sophistication.</p>
                             <div class="d-flex flex-wrap gap-2 mb-4">
                                 <span class="tag-label">Monochrome</span>
                                 <span class="tag-label">Sculptural Furniture</span>
@@ -332,19 +418,24 @@
 
                 <!-- Style 2: Organic Luxury -->
                 <div class="col-lg-6 fade-up stagger-item">
-                    <div class="style-card glass-card shadow-premium p-0 overflow-hidden h-100 border-0 position-relative">
+                    <div
+                        class="style-card glass-card shadow-premium p-0 overflow-hidden h-100 border-0 position-relative">
                         <div class="img-reveal-wrap overflow-hidden" style="height: 350px;">
-                            <img src="assets/images/style-organic.png" alt="Organic Luxury" class="w-100 h-100 object-fit-cover transition-slow hover-scale">
+                            <img src="assets/images/style-organic.png" alt="Organic Luxury"
+                                class="w-100 h-100 object-fit-cover transition-slow hover-scale">
                         </div>
                         <div class="p-5">
                             <div class="d-flex justify-content-between align-items-start mb-3">
                                 <div>
                                     <h3 class="mb-1 text-shadow-sm">Organic Luxury</h3>
-                                    <p class="text-accent text-sm uppercase font-weight-600 mb-0" style="letter-spacing: 1px;">Natural Narrative</p>
+                                    <p class="text-accent text-sm uppercase font-weight-600 mb-0"
+                                        style="letter-spacing: 1px;">Natural Narrative</p>
                                 </div>
                                 <span class="badge-outline text-primary border-primary">Trending</span>
                             </div>
-                            <p class="text-secondary mb-4">A sensory-rich approach combining raw textures with refined materials. We use warm timber, natural stone, and layered linens to evoke a sense of high-end serenity.</p>
+                            <p class="text-secondary mb-4">A sensory-rich approach combining raw textures with refined
+                                materials. We use warm timber, natural stone, and layered linens to evoke a sense of
+                                high-end serenity.</p>
                             <div class="d-flex flex-wrap gap-2 mb-4">
                                 <span class="tag-label">Travertine</span>
                                 <span class="tag-label">Raw Silk</span>
@@ -356,18 +447,23 @@
 
                 <!-- Style 3: Coastal Contemporary -->
                 <div class="col-lg-6 fade-up stagger-item">
-                    <div class="style-card glass-card shadow-premium p-0 overflow-hidden h-100 border-0 position-relative">
+                    <div
+                        class="style-card glass-card shadow-premium p-0 overflow-hidden h-100 border-0 position-relative">
                         <div class="img-reveal-wrap overflow-hidden" style="height: 350px;">
-                            <img src="assets/images/style-coastal.png" alt="Coastal Contemporary" class="w-100 h-100 object-fit-cover transition-slow hover-scale">
+                            <img src="assets/images/style-coastal.png" alt="Coastal Contemporary"
+                                class="w-100 h-100 object-fit-cover transition-slow hover-scale">
                         </div>
                         <div class="p-5">
                             <div class="d-flex justify-content-between align-items-start mb-3">
                                 <div>
                                     <h3 class="mb-1 text-shadow-sm">Coastal Contemporary</h3>
-                                    <p class="text-accent text-sm uppercase font-weight-600 mb-0" style="letter-spacing: 1px;">Airy Elegance</p>
+                                    <p class="text-accent text-sm uppercase font-weight-600 mb-0"
+                                        style="letter-spacing: 1px;">Airy Elegance</p>
                                 </div>
                             </div>
-                            <p class="text-secondary mb-4">Designed for ocean-front estates. We prioritize breezy transitions, ocean-inspired palettes, and weather-resistant luxury to bridge indoor and outdoor living.</p>
+                            <p class="text-secondary mb-4">Designed for ocean-front estates. We prioritize breezy
+                                transitions, ocean-inspired palettes, and weather-resistant luxury to bridge indoor and
+                                outdoor living.</p>
                             <div class="d-flex flex-wrap gap-2 mb-4">
                                 <span class="tag-label">Sun-drenched</span>
                                 <span class="tag-label">Driftwood Tones</span>
@@ -379,18 +475,23 @@
 
                 <!-- Style 4: Classic Grandeur -->
                 <div class="col-lg-6 fade-up stagger-item">
-                    <div class="style-card glass-card shadow-premium p-0 overflow-hidden h-100 border-0 position-relative">
+                    <div
+                        class="style-card glass-card shadow-premium p-0 overflow-hidden h-100 border-0 position-relative">
                         <div class="img-reveal-wrap overflow-hidden" style="height: 350px;">
-                            <img src="assets/images/style-classic.png" alt="Classic Grandeur" class="w-100 h-100 object-fit-cover transition-slow hover-scale">
+                            <img src="assets/images/style-classic.png" alt="Classic Grandeur"
+                                class="w-100 h-100 object-fit-cover transition-slow hover-scale">
                         </div>
                         <div class="p-5">
                             <div class="d-flex justify-content-between align-items-start mb-3">
                                 <div>
                                     <h3 class="mb-1 text-shadow-sm">Classic Grandeur</h3>
-                                    <p class="text-accent text-sm uppercase font-weight-600 mb-0" style="letter-spacing: 1px;">Timeless Appeal</p>
+                                    <p class="text-accent text-sm uppercase font-weight-600 mb-0"
+                                        style="letter-spacing: 1px;">Timeless Appeal</p>
                                 </div>
                             </div>
-                            <p class="text-secondary mb-4">Respecting heritage with high-end curation. We mix curated antiques with modern bespoke furniture to create a layered, multi-generational appeal.</p>
+                            <p class="text-secondary mb-4">Respecting heritage with high-end curation. We mix curated
+                                antiques with modern bespoke furniture to create a layered, multi-generational appeal.
+                            </p>
                             <div class="d-flex flex-wrap gap-2 mb-4">
                                 <span class="tag-label">Walnut Patina</span>
                                 <span class="tag-label">Velvet Accents</span>
@@ -402,10 +503,12 @@
 
                 <!-- CTA Row -->
                 <div class="col-lg-12 text-center mt-5 fade-up">
-                    <div class="p-5 bg-white rounded-lg shadow-sm border d-md-flex align-items-center justify-content-between gap-4">
+                    <div
+                        class="p-5 bg-white rounded-lg shadow-sm border d-md-flex align-items-center justify-content-between gap-4">
                         <div class="text-start">
                             <h3 class="mb-2">Don't know which style fits your property?</h3>
-                            <p class="text-secondary mb-0">Our lead designers will help you identify the most profitable visual strategy for your specific demographic.</p>
+                            <p class="text-secondary mb-0">Our lead designers will help you identify the most profitable
+                                visual strategy for your specific demographic.</p>
                         </div>
                         <div class="d-flex gap-3 mt-4 mt-md-0 flex-shrink-0">
                             <a href="contact.html" class="btn btn-primary btn-lg">Style Audit</a>
@@ -423,36 +526,41 @@
             <div class="text-center mb-6 fade-up">
                 <span class="badge mb-3">Our Methodology</span>
                 <h2 class="display-5" style="font-family: var(--font-heading);">Designed to Sell, Statistically.</h2>
-                <p class="text-secondary max-w-sm mx-auto">We don't just decorate; we engineer a curated lifestyle that buyers can't wait to own.</p>
+                <p class="text-secondary max-w-sm mx-auto">We don't just decorate; we engineer a curated lifestyle that
+                    buyers can't wait to own.</p>
             </div>
 
             <div class="row g-5">
-                <div class="col-md-3 fade-up stagger-item">
+                <div class="col-lg-3 col-md-6 fade-up stagger-item">
                     <div class="process-step">
                         <div class="step-num mb-4">01</div>
                         <h4>Initial Audit</h4>
-                        <p class="text-secondary text-sm">We analyze the property's layout, natural light, and target buyer demographic to build a custom visual strategy.</p>
+                        <p class="text-secondary text-sm">We analyze the property's layout, natural light, and target
+                            buyer demographic to build a custom visual strategy.</p>
                     </div>
                 </div>
-                <div class="col-md-3 fade-up stagger-item">
+                <div class="col-lg-3 col-md-6 fade-up stagger-item">
                     <div class="process-step">
                         <div class="step-num mb-4">02</div>
                         <h4>Curation</h4>
-                        <p class="text-secondary text-sm">Our designers hand-select pieces from our exclusive $4.5M inventory to perfectly match the home’s architecture.</p>
+                        <p class="text-secondary text-sm">Our designers hand-select pieces from our exclusive $4.5M
+                            inventory to perfectly match the home’s architecture.</p>
                     </div>
                 </div>
-                <div class="col-md-3 fade-up stagger-item">
+                <div class="col-lg-3 col-md-6 fade-up stagger-item">
                     <div class="process-step">
                         <div class="step-num mb-4">03</div>
                         <h4>Installation</h4>
-                        <p class="text-secondary text-sm">A seamless single-day install orchestrated by specialists ensuring every detail is camera-ready for high-end photography.</p>
+                        <p class="text-secondary text-sm">A seamless single-day install orchestrated by specialists
+                            ensuring every detail is camera-ready for high-end photography.</p>
                     </div>
                 </div>
-                <div class="col-md-3 fade-up stagger-item">
+                <div class="col-lg-3 col-md-6 fade-up stagger-item">
                     <div class="process-step">
                         <div class="step-num mb-4">04</div>
                         <h4>Maximum ROI</h4>
-                        <p class="text-secondary text-sm">Our staging results in properties selling faster and significantly over asking price, maximizing your bottom line.</p>
+                        <p class="text-secondary text-sm">Our staging results in properties selling faster , efficiently
+                            and significantly over asking price, maximizing your bottom line.</p>
                     </div>
                 </div>
             </div>
@@ -468,7 +576,8 @@
                     <h2 class="display-5" style="font-family: var(--font-heading);">Flexible Staging <br>Solutions</h2>
                 </div>
                 <div class="col-lg-6">
-                    <p class="text-secondary m-0 h5 font-weight-normal" style="line-height: 1.6;">Our tiered approach ensures your property receives the exact design intensity the market demands.</p>
+                    <p class="text-secondary m-0 h5 font-weight-normal" style="line-height: 1.6;">Our tiered approach
+                        ensures your property receives the exact design intensity the market demands.</p>
                 </div>
             </div>
 
@@ -477,15 +586,22 @@
                 <div class="col-lg-4 fade-up stagger-item">
                     <div class="package-card glass-card shadow-sm p-0 border-0 transition-slow mb-4">
                         <div class="img-reveal-wrap overflow-hidden" style="height: 320px;">
-                            <img src="assets/images/design-consultation.png" alt="Strategic Consultation" class="w-100 h-100 object-fit-cover hover-scale">
+                            <img src="assets/images/design-consultation.png" alt="Strategic Consultation"
+                                class="w-100 h-100 object-fit-cover hover-scale">
                         </div>
                         <div class="p-5 package-body">
                             <h4 class="h3 mb-4 text-shadow-sm">Strategic Consultation</h4>
-                            <p class="text-secondary mb-4 h6 font-weight-normal">A bespoke blueprint for owner-occupied properties. We provide the vision; you execute the transformation with our guided roadmaps.</p>
-                            <ul class="list-unstyled mb-5 d-flex flex-column gap-3 text-secondary text-sm text-start mx-auto" style="max-width: 250px;"> <!-- Centered block with left-aligned contents -->
-                                <li class="d-flex align-items-center"><i class="fa fa-arrow-right text-accent me-3" style="font-size: 0.7rem;"></i> Lighting & Visual Flow Audit</li>
-                                <li class="d-flex align-items-center"><i class="fa fa-arrow-right text-accent me-3" style="font-size: 0.7rem;"></i> Demographics-Based Color Consulting</li>
-                                <li class="d-flex align-items-center"><i class="fa fa-arrow-right text-accent me-3" style="font-size: 0.8rem;"></i> Curated Shopping List</li>
+                            <p class="text-secondary mb-4 h6 font-weight-normal">A bespoke blueprint for owner-occupied
+                                properties. We provide the vision; you execute the transformation with our guided
+                                roadmaps.</p>
+                            <ul class="list-unstyled mb-5 d-flex flex-column gap-3 text-secondary text-sm text-start mx-auto"
+                                style="max-width: 250px;"> <!-- Centered block with left-aligned contents -->
+                                <li class="d-flex align-items-center"><i class="fa fa-arrow-right text-accent me-3"
+                                        style="font-size: 0.7rem;"></i> Lighting & Visual Flow Audit</li>
+                                <li class="d-flex align-items-center"><i class="fa fa-arrow-right text-accent me-3"
+                                        style="font-size: 0.7rem;"></i> Demographics-Based Color Consulting</li>
+                                <li class="d-flex align-items-center"><i class="fa fa-arrow-right text-accent me-3"
+                                        style="font-size: 0.8rem;"></i> Curated Shopping List</li>
                             </ul>
                             <div class="mt-auto w-100">
                                 <a href="contact.html" class="btn btn-outline px-5">Get Started</a>
@@ -498,15 +614,22 @@
                 <div class="col-lg-4 fade-up stagger-item">
                     <div class="package-card glass-card shadow-sm p-0 border-0 transition-slow mb-4">
                         <div class="img-reveal-wrap overflow-hidden" style="height: 320px;">
-                            <img src="assets/images/package-standard.png" alt="Premium Staging" class="w-100 h-100 object-fit-cover hover-scale">
+                            <img src="assets/images/package-standard.png" alt="Premium Staging"
+                                class="w-100 h-100 object-fit-cover hover-scale">
                         </div>
                         <div class="p-5 package-body">
                             <h4 class="h3 mb-4 text-shadow-sm">Premium Staging</h4>
-                            <p class="text-secondary mb-4 h6 font-weight-normal">Our most requested solution for vacant listings. We transform empty boxes into aspirational lifestyles that command record offers.</p>
-                            <ul class="list-unstyled mb-5 d-flex flex-column gap-3 text-secondary text-sm text-start mx-auto" style="max-width: 250px;">
-                                <li class="d-flex align-items-center"><i class="fa fa-star text-accent me-3" style="font-size: 0.7rem;"></i> Full Master & Living Suite Design</li>
-                                <li class="d-flex align-items-center"><i class="fa fa-star text-accent me-3" style="font-size: 0.7rem;"></i> Designer Art & Signature Accessories</li>
-                                <li class="d-flex align-items-center"><i class="fa fa-star text-accent me-3" style="font-size: 0.8rem;"></i> Production Support for Photography</li>
+                            <p class="text-secondary mb-4 h6 font-weight-normal">Our most requested solution for vacant
+                                listings. We transform empty boxes into aspirational lifestyles that command record
+                                offers.</p>
+                            <ul class="list-unstyled mb-5 d-flex flex-column gap-3 text-secondary text-sm text-start mx-auto"
+                                style="max-width: 250px;">
+                                <li class="d-flex align-items-center"><i class="fa fa-star text-accent me-3"
+                                        style="font-size: 0.7rem;"></i> Full Master & Living Suite Design</li>
+                                <li class="d-flex align-items-center"><i class="fa fa-star text-accent me-3"
+                                        style="font-size: 0.7rem;"></i> Designer Art & Signature Accessories</li>
+                                <li class="d-flex align-items-center"><i class="fa fa-star text-accent me-3"
+                                        style="font-size: 0.8rem;"></i> Production Support for Photography</li>
                             </ul>
                             <div class="mt-auto w-100">
                                 <a href="contact.html" class="btn btn-primary px-5">See Pricing</a>
@@ -519,15 +642,22 @@
                 <div class="col-lg-4 fade-up stagger-item">
                     <div class="package-card glass-card shadow-sm p-0 border-0 transition-slow mb-4">
                         <div class="img-reveal-wrap overflow-hidden" style="height: 320px;">
-                            <img src="assets/images/package-platinum.png" alt="Elite Estate" class="w-100 h-100 object-fit-cover hover-scale">
+                            <img src="assets/images/package-platinum.png" alt="Elite Estate"
+                                class="w-100 h-100 object-fit-cover hover-scale">
                         </div>
                         <div class="p-5 package-body">
                             <h4 class="h3 mb-4 text-shadow-sm">Elite Estate</h4>
-                            <p class="text-secondary mb-4 h6 font-weight-normal">Reserved for properties $5M+. Custom-procured inventory and an on-site design executive present throughout the process.</p>
-                            <ul class="list-unstyled mb-5 d-flex flex-column gap-3 text-secondary text-sm text-start mx-auto" style="max-width: 250px;">
-                                <li class="d-flex align-items-center"><i class="fa fa-gem text-accent me-3" style="font-size: 0.7rem;"></i> White-Glove Staging Across All Levels</li>
-                                <li class="d-flex align-items-center"><i class="fa fa-gem text-accent me-3" style="font-size: 0.7rem;"></i> Luxury Outdoor & Pool Area Curation</li>
-                                <li class="d-flex align-items-center"><i class="fa fa-gem text-accent me-3" style="font-size: 0.8rem;"></i> Private Event Logistics Support</li>
+                            <p class="text-secondary mb-4 h6 font-weight-normal">Reserved for properties $5M+.
+                                Custom-procured inventory and an on-site design executive present throughout the
+                                process.</p>
+                            <ul class="list-unstyled mb-5 d-flex flex-column gap-3 text-secondary text-sm text-start mx-auto"
+                                style="max-width: 250px;">
+                                <li class="d-flex align-items-center"><i class="fa fa-gem text-accent me-3"
+                                        style="font-size: 0.7rem;"></i> White-Glove Staging Across All Levels</li>
+                                <li class="d-flex align-items-center"><i class="fa fa-gem text-accent me-3"
+                                        style="font-size: 0.7rem;"></i> Luxury Outdoor & Pool Area Curation</li>
+                                <li class="d-flex align-items-center"><i class="fa fa-gem text-accent me-3"
+                                        style="font-size: 0.8rem;"></i> Private Event Logistics Support</li>
                             </ul>
                             <div class="mt-auto w-100">
                                 <a href="contact.html" class="btn btn-outline px-5">Enquire Now</a>
@@ -545,21 +675,31 @@
             <div class="row align-items-center">
                 <div class="col-lg-5 fade-up">
                     <span class="badge mb-3">Client Feedback</span>
-                    <h2 class="display-5 mb-5" style="font-family: var(--font-heading);">Trusted by the best in the industry.</h2>
+                    <h2 class="display-5 mb-5" style="font-family: var(--font-heading);">Trusted by the best in the
+                        industry.</h2>
                     <div class="testimonial-nav d-flex gap-3 mb-5">
-                        <button class="btn btn-sm btn-outline rounded-circle" style="width: 50px; height: 50px;" aria-label="Previous"><i class="fa fa-chevron-left"></i></button>
-                        <button class="btn btn-sm btn-outline rounded-circle" style="width: 50px; height: 50px;" aria-label="Next"><i class="fa fa-chevron-right"></i></button>
+                        <button class="btn btn-sm btn-outline rounded-circle" style="width: 50px; height: 50px;"
+                            aria-label="Previous"><i class="fa fa-chevron-left"></i></button>
+                        <button class="btn btn-sm btn-outline rounded-circle" style="width: 50px; height: 50px;"
+                            aria-label="Next"><i class="fa fa-chevron-right"></i></button>
                     </div>
                 </div>
                 <div class="col-lg-7 fade-up">
                     <div class="testimonial-card glass-card p-5 border-0 shadow-lg position-relative overflow-hidden">
-                        <i class="fa fa-quote-right position-absolute top-0 end-0 m-5 opacity-1" style="font-size: 5rem; color: var(--accent-color); opacity: 0.1 !important;"></i>
+                        <i class="fa fa-quote-right position-absolute top-0 end-0 m-5 opacity-1"
+                            style="font-size: 5rem; color: var(--accent-color); opacity: 0.1 !important;"></i>
                         <div class="rating mb-4 text-accent">
-                            <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                                class="fa fa-star"></i><i class="fa fa-star"></i>
                         </div>
-                        <p class="h4 mb-5" style="font-family: var(--font-body); font-style: italic; line-height: 1.6; font-weight: normal;">"Lumina completely changed the game for our luxury listings. The attention to architectural detail is unmatched. Our last three staged properties sold in under 10 days for well over asking price."</p>
+                        <p class="h4 mb-5"
+                            style="font-family: var(--font-body); font-style: italic; line-height: 1.6; font-weight: normal;">
+                            "Lumina completely changed the game for our luxury listings. The attention to architectural
+                            detail is unmatched. Our last three staged properties sold in under 10 days for well over
+                            asking price."</p>
                         <div class="client-info d-flex align-items-center gap-3">
-                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=100&h=100" alt="Client" class="rounded-circle" style="width: 60px; height: 60px;">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=100&h=100"
+                                alt="Client" class="rounded-circle" style="width: 60px; height: 60px;">
                             <div>
                                 <h5 class="mb-0">Sarah Jenkins</h5>
                                 <p class="text-secondary text-sm mb-0">Senior Associate, Berkshire Hathaway</p>
@@ -577,19 +717,23 @@
             <div class="row g-4 text-center">
                 <div class="col-md-3 fade-up stagger-item">
                     <h2 class="display-3 mb-2 font-weight-bold counter-text text-accent">92%</h2>
-                    <p class="text-white opacity-75 uppercase text-sm" style="letter-spacing: 2px;">Properties Sold Over Asking</p>
+                    <p class="text-white opacity-75 uppercase text-sm" style="letter-spacing: 2px;">Properties Sold Over
+                        Asking</p>
                 </div>
                 <div class="col-md-3 fade-up stagger-item">
                     <h2 class="display-3 mb-2 font-weight-bold counter-text text-accent">14</h2>
-                    <p class="text-white opacity-75 uppercase text-sm" style="letter-spacing: 2px;">Avg. Days on Market</p>
+                    <p class="text-white opacity-75 uppercase text-sm" style="letter-spacing: 2px;">Avg. Days on Market
+                    </p>
                 </div>
                 <div class="col-md-3 fade-up stagger-item">
                     <h2 class="display-3 mb-2 font-weight-bold counter-text text-accent">600+</h2>
-                    <p class="text-white opacity-75 uppercase text-sm" style="letter-spacing: 2px;">High-Value Homes Staged</p>
+                    <p class="text-white opacity-75 uppercase text-sm" style="letter-spacing: 2px;">High-Value Homes
+                        Staged</p>
                 </div>
                 <div class="col-md-3 fade-up stagger-item">
                     <h2 class="display-3 mb-2 font-weight-bold counter-text text-accent">$2.1B</h2>
-                    <p class="text-white opacity-75 uppercase text-sm" style="letter-spacing: 2px;">Total Assets Transacted</p>
+                    <p class="text-white opacity-75 uppercase text-sm" style="letter-spacing: 2px;">Total Assets
+                        Transacted</p>
                 </div>
             </div>
         </div>
@@ -604,7 +748,8 @@
                         <div class="brand-logo"><img src="assets/images/logo.png" alt="Lumina Staging Logo"></div>
                         <h2 class="brand-name mb-0">Lumina<span>Staging</span></h2>
                     </a>
-                    <p class="mt-3">Elevating real estate through strategic design. We help sellers and agents maximize their property's potential and market value.</p>
+                    <p class="mt-3">Elevating real estate through strategic design. We help sellers and agents maximize
+                        their property's potential and market value.</p>
                 </div>
                 <div class="col-lg-2 col-md-4 mb-4">
                     <h4 class="mb-3">Company</h4>
@@ -630,9 +775,33 @@
                     <p class="mb-2">📧 hello@luminastaging.com</p>
                     <p class="mb-4">📞 (555) 123-4567</p>
                     <div class="d-flex gap-2">
-                        <div class="bg-surface text-primary p-2 rounded" style="width: 38px; height: 38px; display: flex; align-items: center; justify-content: center; cursor: pointer;" aria-label="Instagram"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></div>
-                        <div class="bg-surface text-primary p-2 rounded" style="width: 38px; height: 38px; display: flex; align-items: center; justify-content: center; cursor: pointer;" aria-label="Facebook"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></div>
-                        <div class="bg-surface text-primary p-2 rounded" style="width: 38px; height: 38px; display: flex; align-items: center; justify-content: center; cursor: pointer;" aria-label="LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></div>
+                        <div class="bg-surface text-primary p-2 rounded"
+                            style="width: 38px; height: 38px; display: flex; align-items: center; justify-content: center; cursor: pointer;"
+                            aria-label="Instagram"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg></div>
+                        <div class="bg-surface text-primary p-2 rounded"
+                            style="width: 38px; height: 38px; display: flex; align-items: center; justify-content: center; cursor: pointer;"
+                            aria-label="Facebook"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                            </svg></div>
+                        <div class="bg-surface text-primary p-2 rounded"
+                            style="width: 38px; height: 38px; display: flex; align-items: center; justify-content: center; cursor: pointer;"
+                            aria-label="LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                                </path>
+                                <rect x="2" y="9" width="4" height="12"></rect>
+                                <circle cx="4" cy="4" r="2"></circle>
+                            </svg></div>
                     </div>
                 </div>
             </div>
@@ -649,4 +818,5 @@
     <script src="assets/js/animations.js"></script>
     <script src="assets/js/main.js"></script>
 </body>
+
 </html>
