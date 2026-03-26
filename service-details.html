@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vacant Home Staging - Service Details | Lumina Staging</title>
+    <link rel="icon" type="image/png" href="assets/images/logo.png">
+
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,21 +21,33 @@
     <nav class="navbar">
         <div class="container">
             <a href="index.html" class="nav-brand">
-                <h2>Lumina<span>Staging</span></h2>
+                <h2 class="brand-name">Lumina<span>Staging</span></h2>
             </a>
             <ul class="nav-menu">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="home-2.html">Home 2</a></li>
-                <li><a href="services.html" style="color: var(--accent-color)">Services</a></li>
+                <li><a href="services.html">Services</a></li>
                 <li><a href="before-after.html">Before & After</a></li>
                 <li><a href="blog.html">Blog</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
                 <li><a href="contact.html">Contact</a></li>
+                <!-- Mobile Actions -->
+                <li class="mobile-view-only mt-3"><hr class="opacity-10"></li>
+                <li class="mobile-view-only"><a href="login.html"><i class="fas fa-sign-in-alt me-2"></i>Login</a></li>
+                <li class="mobile-view-only"><a href="signup.html" class="text-accent"><i class="fas fa-user-plus me-2"></i>Signup</a></li>
+                <li class="mobile-view-only d-flex gap-3 mt-3">
+                    <button class="rtl-toggle-btn btn btn-outline btn-sm w-100">🌐 RTL</button>
+                    <button class="theme-toggle-btn btn btn-outline btn-sm w-100">🌙 Theme</button>
+                </li>
             </ul>
             <div class="nav-actions">
-                <button class="rtl-toggle-btn btn btn-outline btn-sm me-1" style="font-size: 0.7rem; padding: 0.2rem 0.5rem;" aria-label="Toggle RTL">🌐 RTL</button>
-                <button class="theme-toggle-btn" aria-label="Toggle Theme">🌙</button>
-                <a href="login.html" class="btn btn-outline d-none d-md-inline-block">Login</a>
-                <a href="signup.html" class="btn btn-primary d-none d-md-inline-block">Signup</a>
+                <div class="desktop-view-only">
+                    <button class="rtl-toggle-btn btn btn-outline btn-sm me-1"
+                        style="font-size: 0.7rem; padding: 0.2rem 0.5rem;" aria-label="Toggle RTL">🌐 RTL</button>
+                    <button class="theme-toggle-btn" aria-label="Toggle Theme">🌙</button>
+                    <a href="login.html" class="btn btn-outline btn-sm">Login</a>
+                    <a href="signup.html" class="btn btn-primary btn-sm">Signup</a>
+                </div>
                 <button class="mobile-menu-btn" aria-label="Open Menu">☰</button>
             </div>
         </div>
@@ -119,7 +133,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 mb-4">
-                    <h3 class="mb-3">Lumina<span>Staging</span></h3>
+                    <h2 class="brand-name mb-3">Lumina<span>Staging</span></h2>
                     <p>Elevating real estate through strategic design. We help sellers and agents maximize their property's potential and market value.</p>
                 </div>
                 <div class="col-lg-2 col-md-4 mb-4">

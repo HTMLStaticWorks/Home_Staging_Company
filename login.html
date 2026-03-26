@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login | Lumina Staging</title>
+    <link rel="icon" type="image/png" href="assets/images/logo.png">
+
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,13 +14,72 @@
     <link rel="stylesheet" href="assets/css/bootstrap.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/dark.css">
+
+    <style>
+        .social-icon-btn {
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: white;
+            border: 1px solid rgba(0,0,0,0.08);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            padding: 0;
+            cursor: pointer;
+        }
+        .social-icon-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 15px rgba(0,0,0,0.05);
+            border-color: rgba(0,0,0,0.15);
+        }
+        [data-theme="dark"] .social-icon-btn {
+            background: #2d3748;
+            border-color: rgba(255,255,255,0.1);
+        }
+        [data-theme="dark"] .social-icon-btn:hover {
+            background: #374151;
+        }
+        
+        .divider {
+            position: relative;
+            text-align: center;
+            margin: 2rem 0;
+            width: 100%;
+        }
+        .divider::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: rgba(0,0,0,0.08);
+        }
+        [data-theme="dark"] .divider::before {
+            background: rgba(255,255,255,0.1);
+        }
+        .divider span {
+            background: white;
+            padding: 0 1rem;
+            position: relative;
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+        }
+        [data-theme="dark"] .divider span {
+            background: #1a202c;
+        }
+    </style>
 </head>
 <body class="bg-surface h-100">
     <div class="container-fluid min-vh-100 d-flex flex-column">
         <!-- Centered Brand -->
         <div class="text-center pt-5">
-            <a href="index.html" class="nav-brand d-inline-block">
-                <h2 class="mb-0">Lumina<span>Staging</span></h2>
+            <a href="index.html" class="nav-brand d-inline-flex">
+                <div class="brand-logo"><img src="assets/images/logo.png" alt="Lumina Staging Logo"></div>
+                <h2 class="brand-name">Lumina<span>Staging</span></h2>
             </a>
         </div>
 
@@ -48,7 +109,29 @@
                         <label class="form-check-label text-secondary" for="remember">Remember me</label>
                     </div>
 
-                    <button type="submit" class="btn btn-primary w-100 mb-4">Log In</button>
+                    <div class="text-center mb-4">
+                        <button type="submit" class="btn btn-primary px-5">Log In</button>
+                    </div>
+
+                    <div class="divider">
+                        <span>Or continue with</span>
+                    </div>
+
+                    <div class="d-flex justify-content-center gap-4 mb-4">
+                        <button type="button" class="social-icon-btn btn" aria-label="Log in with Google">
+                            <svg width="24" height="24" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M17.64 9.2c0-.637-.057-1.251-.164-1.84H9v3.481h4.844c-.209 1.125-.843 2.078-1.791 2.716l2.9 2.249C16.638 14.183 18 11.903 18 9.2z" fill="#4285F4"/>
+                                <path d="M9 18c2.43 0 4.467-.806 5.956-2.194l-2.9-2.249c-.803.538-1.83.855-3.056.855-2.35 0-4.336-1.587-5.044-3.719L.893 13.064C2.369 15.994 5.4 18 9 18z" fill="#34A853"/>
+                                <path d="M3.956 10.693A5.441 5.441 0 0 1 3.6 9c0-.584.1-1.155.281-1.693L1.037 5.093A8.995 8.995 0 0 0 0 9c0 1.391.319 2.709.893 3.886l3.063-2.193z" fill="#FBBC05"/>
+                                <path d="M9 3.58c1.321 0 2.508.454 3.44 1.345l2.582-2.58C13.463.891 11.426 0 9 0 5.4 0 2.369 2.006.893 4.936l3.063 2.378C4.664 5.167 6.65 3.58 9 3.58z" fill="#EA4335"/>
+                            </svg>
+                        </button>
+                        <button type="button" class="social-icon-btn btn" aria-label="Log in with Facebook">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="#1877F2" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                            </svg>
+                        </button>
+                    </div>
                     
                     <div class="text-center">
                         <p class="text-secondary mb-0">Don't have an account? <a href="signup.html" class="font-weight-600">Sign up</a></p>

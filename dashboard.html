@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agent Dashboard | Lumina Staging</title>
+    <link rel="icon" type="image/png" href="assets/images/logo.png">
+
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -88,6 +90,76 @@
         [data-theme="dark"] .status-staging { background-color: rgba(3, 105, 161, 0.2); color: #7DD3FC; }
         [data-theme="dark"] .status-complete { background-color: rgba(21, 128, 61, 0.2); color: #86EFAC; }
         [data-theme="dark"] .status-cleaning { background-color: rgba(180, 83, 9, 0.2); color: #FCD34D; }
+        /* Premium Profile Avatar */
+        .profile-btn {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            background: var(--accent-color);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            border: 2px solid transparent;
+            transition: var(--transition);
+            box-shadow: 0 4px 10px rgba(196, 164, 132, 0.2);
+        }
+        .profile-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 15px rgba(196, 164, 132, 0.3);
+            border-color: var(--primary-color);
+        }
+        
+        .profile-dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .profile-menu {
+            position: absolute;
+            right: 0;
+            top: 100%;
+            background: var(--surface-color);
+            border: 1px solid rgba(0,0,0,0.08);
+            border-radius: var(--radius-md);
+            padding: 1.25rem;
+            min-width: 220px;
+            box-shadow: var(--shadow-lg);
+            display: none;
+            z-index: 1001;
+            margin-top: 0.75rem;
+        }
+        /* Invisible bridge to prevent dropdown from vanishing */
+        .profile-menu::before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            left: 0;
+            right: 0;
+            height: 20px;
+            background: transparent;
+        }
+        .profile-dropdown:hover .profile-menu {
+            display: block;
+        }
+        [data-theme="dark"] .profile-menu {
+            background: #2d3748;
+            border-color: rgba(255,255,255,0.1);
+        }
+        .dropdown-item {
+            transition: var(--transition);
+            border-radius: 6px;
+            padding: 0.6rem 0.8rem !important;
+        }
+        .dropdown-item:hover {
+            background: rgba(0,0,0,0.03);
+            transform: translateX(3px);
+        }
+        [data-theme="dark"] .dropdown-item:hover {
+            background: rgba(255,255,255,0.05);
+        }
     </style>
 </head>
 <body class="bg-surface h-100">
@@ -95,25 +167,29 @@
     <nav class="navbar">
         <div class="container">
             <a href="index.html" class="nav-brand">
-                <h2>Lumina<span>Staging</span></h2>
+                <div class="brand-logo"><img src="assets/images/logo.png" alt="Lumina Staging Logo"></div>
+                <h2 class="brand-name">Lumina<span>Staging</span></h2>
             </a>
-            <ul class="nav-menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="before-after.html">Portfolio</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="dashboard.html" style="color: var(--accent-color)">Dashboard</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
             <div class="nav-actions">
-                <button class="rtl-toggle-btn btn btn-outline btn-sm" aria-label="Toggle RTL">🌐 RTL</button>
-                <button class="theme-toggle-btn" aria-label="Toggle Theme">🌙</button>
-                <div class="dropdown">
-                    <button class="btn btn-outline btn-sm d-flex align-items-center gap-2" type="button">
-                        <i class="fas fa-user-circle"></i> SJ
-                    </button>
+                <div class="profile-dropdown">
+                    <div class="profile-btn">SJ</div>
+                    <div class="profile-menu">
+                        <div class="mb-3 px-1">
+                            <h6 class="h6 mb-0">Sarah Jenkins</h6>
+                            <p class="text-xs text-secondary mb-0">Senior Agent Portal</p>
+                        </div>
+                        <a href="#" class="dropdown-item text-sm d-flex align-items-center gap-2 mb-1">
+                            <i class="fas fa-user text-accent"></i> My Profile
+                        </a>
+                        <a href="#" class="dropdown-item text-sm d-flex align-items-center gap-2 mb-1">
+                            <i class="fas fa-cog text-accent"></i> Account Settings
+                        </a>
+                        <hr class="my-3 opacity-10">
+                        <a href="login.html" class="dropdown-item text-danger text-sm d-flex align-items-center gap-2">
+                            <i class="fas fa-sign-out-alt"></i> Logout
+                        </a>
+                    </div>
                 </div>
-                <button class="mobile-menu-btn" aria-label="Open Menu">☰</button>
             </div>
         </div>
     </nav>
@@ -231,7 +307,7 @@
                                 <!-- Item 3 -->
                                 <div class="col-md-4 mb-4">
                                     <div class="inventory-card glass-card p-0">
-                                        <img src="https://images.unsplash.com/photo-1616489953149-8f6f671c676c?auto=format&fit=crop&q=80&w=400" alt="Headboard" class="inventory-img">
+                                        <img src="https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?auto=format&fit=crop&q=80&w=400" alt="Headboard" class="inventory-img">
                                         <div class="p-3">
                                             <h6 class="mb-1">King Tufted Headboard</h6>
                                             <p class="text-xs text-secondary mb-3">Ref: #INV-3321</p>
@@ -244,15 +320,6 @@
                                 </div>
                             </div>
 
-                            <div class="text-center mt-4">
-                                <nav aria-label="Page navigation">
-                                    <ul class="pagination pagination-sm justify-content-center">
-                                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                                        <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                    </ul>
-                                </nav>
-                            </div>
                         </div>
                     </div>
 
@@ -325,25 +392,6 @@
             </div>
         </main>
 
-        <!-- Site Footer -->
-        <footer class="footer">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-4 mb-4">
-                        <h3 class="mb-3">Lumina<span>Staging</span></h3>
-                        <p>Elevating real estate through strategic design.</p>
-                    </div>
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <h4 class="mb-3">Connect</h4>
-                        <p class="text-sm mb-2">📍 123 Design Avenue, Suite 100</p>
-                        <p class="text-sm">📧 hello@luminastaging.com</p>
-                    </div>
-                    <div class="col-lg-4 col-md-6 text-lg-end">
-                        <p class="text-sm">&copy; 2026 Lumina Staging. All rights reserved.</p>
-                    </div>
-                </div>
-            </div>
-        </footer>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>

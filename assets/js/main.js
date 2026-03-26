@@ -9,14 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
     if (mobileBtn && navMenu) {
         mobileBtn.addEventListener('click', () => {
             navMenu.style.display = navMenu.style.display === 'flex' ? 'none' : 'flex';
-            navMenu.style.flexDirection = 'column';
-            navMenu.style.position = 'absolute';
-            navMenu.style.top = '100%';
-            navMenu.style.left = '0';
-            navMenu.style.width = '100%';
-            navMenu.style.backgroundColor = 'var(--surface-color)';
-            navMenu.style.padding = '1rem';
-            navMenu.style.boxShadow = 'var(--shadow-md)';
         });
     }
 
