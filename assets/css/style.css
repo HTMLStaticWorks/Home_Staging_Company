@@ -162,6 +162,10 @@ img {
 .text-uppercase { text-transform: uppercase !important; }
 .text-sm { font-size: 0.875rem !important; }
 .text-xs { font-size: 0.75rem !important; }
+.text-primary { color: var(--text-primary) !important; }
+.text-secondary { color: var(--text-secondary) !important; }
+.text-accent { color: var(--accent-color) !important; }
+.text-white { color: #ffffff !important; }
 .font-weight-600 { font-weight: 600 !important; }
 .font-weight-normal { font-weight: 400 !important; }
 .list-unstyled { list-style: none !important; padding-left: 0 !important; margin: 0 !important; }

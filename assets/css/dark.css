@@ -12,6 +12,19 @@
   --shadow-lg: 0 10px 15px -3px rgba(255, 255, 255, 0.05);
 }
 
+[data-theme="dark"] a {
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] a:hover {
+  color: var(--accent-color);
+}
+
+[data-theme="dark"] .badge {
+  background-color: rgba(214, 185, 140, 0.15);
+  color: var(--accent-color);
+}
+
 [data-theme="dark"] .navbar {
   background-color: rgba(2, 6, 23, 0.9);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
