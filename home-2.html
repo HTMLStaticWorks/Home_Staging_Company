@@ -33,7 +33,7 @@
 
         .split-hero-content {
             flex: 1;
-            padding: 4rem;
+            padding: 2.5rem;
         }
 
         .split-hero-img {
@@ -307,8 +307,8 @@
                 <li><a href="services.html">Services</a></li>
                 <li><a href="before-after.html">Before & After</a></li>
                 <li><a href="blog.html">Blog</a></li>
-                <li><a href="dashboard.html">Dashboard</a></li>
                 <li><a href="contact.html">Contact</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
                 <!-- Mobile Actions -->
                 <li class="mobile-view-only mt-3">
                     <hr class="opacity-10">
@@ -348,7 +348,7 @@
                 <a href="contact.html" class="btn btn-outline btn-lg">Book Consult</a>
             </div>
 
-            <div class="row pt-5 mt-4 border-top">
+            <div class="row pt-3 mt-3 border-top">
                 <div class="col-6">
                     <h3 class="display-6 m-0">21 Days</h3>
                     <p class="text-secondary text-sm">Avg. Days on Market</p>
@@ -363,7 +363,7 @@
     </section>
 
     <!-- Marquee / Partner Strip Placeholder -->
-    <div class="bg-primary text-white py-3 overflow-hidden">
+    <div class="bg-primary text-white py-2 overflow-hidden">
         <div class="container text-center">
             <div class="d-flex flex-wrap justify-content-center text-sm uppercase gap-3" style="letter-spacing: 2px;">
                 <span class="opacity-50">Featured In:</span>
@@ -502,15 +502,15 @@
                 </div>
 
                 <!-- CTA Row -->
-                <div class="col-lg-12 text-center mt-5 fade-up">
+                <div class="col-lg-12 mt-5 fade-up">
                     <div
-                        class="p-5 bg-white rounded-lg shadow-sm border d-md-flex align-items-center justify-content-between gap-4">
-                        <div class="text-start">
+                        class="p-5 bg-white rounded-lg shadow-sm border d-flex flex-column flex-lg-row align-items-center justify-content-between gap-4 text-center text-lg-start">
+                        <div class="max-w-3xl">
                             <h3 class="mb-2">Don't know which style fits your property?</h3>
                             <p class="text-secondary mb-0">Our lead designers will help you identify the most profitable
                                 visual strategy for your specific demographic.</p>
                         </div>
-                        <div class="d-flex gap-3 mt-4 mt-md-0 flex-shrink-0">
+                        <div class="d-flex gap-3 mt-4 mt-lg-0 flex-shrink-0">
                             <a href="contact.html" class="btn btn-primary btn-lg">Style Audit</a>
                             <a href="before-after.html" class="btn btn-outline btn-lg">View Portfolio</a>
                         </div>
@@ -671,24 +671,20 @@
 
     <!-- Section 3: Testimonials (New) -->
     <section class="section-padding bg-surface stagger-container overflow-hidden">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-5 fade-up">
-                    <span class="badge mb-3">Client Feedback</span>
-                    <h2 class="display-5 mb-5" style="font-family: var(--font-heading);">Trusted by the best in the
-                        industry.</h2>
-                    <div class="testimonial-nav d-flex gap-3 mb-5">
-                        <button class="btn btn-sm btn-outline rounded-circle" style="width: 50px; height: 50px;"
-                            aria-label="Previous"><i class="fa fa-chevron-left"></i></button>
-                        <button class="btn btn-sm btn-outline rounded-circle" style="width: 50px; height: 50px;"
-                            aria-label="Next"><i class="fa fa-chevron-right"></i></button>
-                    </div>
-                </div>
-                <div class="col-lg-7 fade-up">
-                    <div class="testimonial-card glass-card p-5 border-0 shadow-lg position-relative overflow-hidden">
-                        <i class="fa fa-quote-right position-absolute top-0 end-0 m-5 opacity-1"
-                            style="font-size: 5rem; color: var(--accent-color); opacity: 0.1 !important;"></i>
-                        <div class="rating mb-4 text-accent">
+        <div class="container text-center">
+            <div class="mb-5 fade-up">
+                <span class="badge mb-3">Client Feedback</span>
+                <h2 class="display-5" style="font-family: var(--font-heading);">Trusted by the best in the industry.
+                </h2>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-8 fade-up">
+                    <div
+                        class="testimonial-card glass-card p-5 border-0 shadow-lg position-relative overflow-hidden text-center">
+                        <i class="fa fa-quote-right position-absolute top-0 end-0 m-5"
+                            style="font-size: 5rem; color: var(--accent-color); opacity: 0.05 !important;"></i>
+                        <div class="rating mb-4 text-accent justify-content-center d-flex">
                             <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i
                                 class="fa fa-star"></i><i class="fa fa-star"></i>
                         </div>
@@ -697,47 +693,29 @@
                             "Lumina completely changed the game for our luxury listings. The attention to architectural
                             detail is unmatched. Our last three staged properties sold in under 10 days for well over
                             asking price."</p>
-                        <div class="client-info d-flex align-items-center gap-3">
+                        <div class="client-info d-flex flex-column align-items-center gap-3">
                             <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=100&h=100"
-                                alt="Client" class="rounded-circle" style="width: 60px; height: 60px;">
+                                alt="Client" class="rounded-circle"
+                                style="width: 70px; height: 70px; border: 3px solid var(--accent-color); padding: 3px;">
                             <div>
-                                <h5 class="mb-0">Sarah Jenkins</h5>
+                                <h5 class="mb-1">Sarah Jenkins</h5>
                                 <p class="text-secondary text-sm mb-0">Senior Associate, Berkshire Hathaway</p>
                             </div>
                         </div>
+                    </div>
+
+                    <div class="testimonial-nav d-flex justify-content-center gap-3 mt-5">
+                        <button class="btn btn-sm btn-outline rounded-circle" style="width: 50px; height: 50px;"
+                            aria-label="Previous"><i class="fa fa-chevron-left"></i></button>
+                        <button class="btn btn-sm btn-outline rounded-circle" style="width: 50px; height: 50px;"
+                            aria-label="Next"><i class="fa fa-chevron-right"></i></button>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Section 4: Statistics / Impact (New) -->
-    <section class="section-padding bg-primary text-white overflow-hidden stagger-container">
-        <div class="container">
-            <div class="row g-4 text-center">
-                <div class="col-md-3 fade-up stagger-item">
-                    <h2 class="display-3 mb-2 font-weight-bold counter-text text-accent">92%</h2>
-                    <p class="text-white opacity-75 uppercase text-sm" style="letter-spacing: 2px;">Properties Sold Over
-                        Asking</p>
-                </div>
-                <div class="col-md-3 fade-up stagger-item">
-                    <h2 class="display-3 mb-2 font-weight-bold counter-text text-accent">14</h2>
-                    <p class="text-white opacity-75 uppercase text-sm" style="letter-spacing: 2px;">Avg. Days on Market
-                    </p>
-                </div>
-                <div class="col-md-3 fade-up stagger-item">
-                    <h2 class="display-3 mb-2 font-weight-bold counter-text text-accent">600+</h2>
-                    <p class="text-white opacity-75 uppercase text-sm" style="letter-spacing: 2px;">High-Value Homes
-                        Staged</p>
-                </div>
-                <div class="col-md-3 fade-up stagger-item">
-                    <h2 class="display-3 mb-2 font-weight-bold counter-text text-accent">$2.1B</h2>
-                    <p class="text-white opacity-75 uppercase text-sm" style="letter-spacing: 2px;">Total Assets
-                        Transacted</p>
-                </div>
-            </div>
-        </div>
-    </section>
+
 
     <!-- Footer -->
     <footer class="footer">

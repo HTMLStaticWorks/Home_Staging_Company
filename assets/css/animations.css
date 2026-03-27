@@ -16,10 +16,9 @@ body {
 
 /* Ensure smooth image loads */
 img {
-  opacity: 0;
   transition: opacity 0.5s ease;
 }
 
-img.loaded {
-  opacity: 1;
+img.loading {
+  opacity: 0;
 }

@@ -13,14 +13,12 @@ document.addEventListener('DOMContentLoaded', () => {
         // Hero Animations
         gsap.from('.hero-content h1', {
             y: 50,
-            opacity: 0,
             duration: 1,
             ease: "power3.out"
         });
 
         gsap.from('.hero-content p', {
             y: 30,
-            opacity: 0,
             duration: 1,
             delay: 0.2,
             ease: "power3.out"
@@ -28,7 +26,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         gsap.from('.hero-content .btn', {
             y: 20,
-            opacity: 0,
             duration: 0.8,
             delay: 0.4,
             ease: "power3.out",
