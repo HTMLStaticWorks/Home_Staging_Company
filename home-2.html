@@ -37,24 +37,32 @@
         }
 
         .split-hero-img {
-            flex: 1;
-            height: 100vh;
+            flex: 0 0 42%;
+            width: 42%;
+            height: 80vh;
+            min-width: 0;
             object-fit: cover;
+            border-radius: 24px;
+            margin-right: 3rem;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
         }
 
         @media (max-width: 991px) {
             .split-hero {
                 flex-direction: column-reverse;
                 min-height: auto;
+                padding-top: 6rem;
             }
 
             .split-hero-img {
-                width: 100%;
+                width: calc(100% - 3rem);
                 height: 50vh;
+                margin: 0 auto;
+                margin-right: auto;
             }
 
             .split-hero-content {
-                padding: 2rem;
+                padding: 2rem 1.5rem;
             }
         }
 
@@ -313,7 +321,6 @@
                 <li class="mobile-view-only mt-3">
                     <hr class="opacity-10">
                 </li>
-                <li class="mobile-view-only"><a href="login.html"><i class="fas fa-sign-in-alt me-2"></i>Login</a></li>
                 <li class="mobile-view-only"><a href="signup.html" class="text-accent"><i
                             class="fas fa-user-plus me-2"></i>Signup</a></li>
                 <li class="mobile-view-only d-flex gap-3 mt-3">
@@ -326,7 +333,6 @@
                     <button class="rtl-toggle-btn btn btn-outline btn-sm me-1"
                         style="font-size: 0.7rem; padding: 0.2rem 0.5rem;" aria-label="Toggle RTL">🌐 RTL</button>
                     <button class="theme-toggle-btn" aria-label="Toggle Theme">🌙</button>
-                    <a href="login.html" class="btn btn-outline btn-sm">Login</a>
                     <a href="signup.html" class="btn btn-primary btn-sm">Signup</a>
                 </div>
                 <button class="mobile-menu-btn" aria-label="Open Menu">☰</button>
@@ -532,32 +538,40 @@
 
             <div class="row g-5">
                 <div class="col-lg-3 col-md-6 fade-up stagger-item">
-                    <div class="process-step">
-                        <div class="step-num mb-4">01</div>
+                    <div class="process-step text-center">
+                        <div class="img-wrap mb-4 mx-auto rounded-circle overflow-hidden shadow-sm" style="width: 100px; height: 100px; border: 3px solid rgba(0,0,0,0.05);">
+                            <img src="assets/images/process-audit.png" alt="Initial Audit" class="w-100 h-100 object-fit-cover">
+                        </div>
                         <h4>Initial Audit</h4>
                         <p class="text-secondary text-sm">We analyze the property's layout, natural light, and target
                             buyer demographic to build a custom visual strategy.</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 fade-up stagger-item">
-                    <div class="process-step">
-                        <div class="step-num mb-4">02</div>
+                    <div class="process-step text-center">
+                        <div class="img-wrap mb-4 mx-auto rounded-circle overflow-hidden shadow-sm" style="width: 100px; height: 100px; border: 3px solid rgba(0,0,0,0.05);">
+                            <img src="assets/images/process-curation.png" alt="Curation" class="w-100 h-100 object-fit-cover">
+                        </div>
                         <h4>Curation</h4>
                         <p class="text-secondary text-sm">Our designers hand-select pieces from our exclusive $4.5M
                             inventory to perfectly match the home’s architecture.</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 fade-up stagger-item">
-                    <div class="process-step">
-                        <div class="step-num mb-4">03</div>
+                    <div class="process-step text-center">
+                        <div class="img-wrap mb-4 mx-auto rounded-circle overflow-hidden shadow-sm" style="width: 100px; height: 100px; border: 3px solid rgba(0,0,0,0.05);">
+                            <img src="https://images.unsplash.com/photo-1540569014015-19a7be504e3a?auto=format&fit=crop&q=80&w=400" alt="Installation" class="w-100 h-100 object-fit-cover">
+                        </div>
                         <h4>Installation</h4>
                         <p class="text-secondary text-sm">A seamless single-day install orchestrated by specialists
                             ensuring every detail is camera-ready for high-end photography.</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 fade-up stagger-item">
-                    <div class="process-step">
-                        <div class="step-num mb-4">04</div>
+                    <div class="process-step text-center">
+                        <div class="img-wrap mb-4 mx-auto rounded-circle overflow-hidden shadow-sm" style="width: 100px; height: 100px; border: 3px solid rgba(0,0,0,0.05);">
+                            <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&q=80&w=400" alt="Maximum ROI" class="w-100 h-100 object-fit-cover">
+                        </div>
                         <h4>Maximum ROI</h4>
                         <p class="text-secondary text-sm">Our staging results in properties selling faster , efficiently
                             and significantly over asking price, maximizing your bottom line.</p>

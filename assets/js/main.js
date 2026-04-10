@@ -10,6 +10,16 @@ document.addEventListener('DOMContentLoaded', () => {
         mobileBtn.addEventListener('click', () => {
             navMenu.style.display = navMenu.style.display === 'flex' ? 'none' : 'flex';
         });
+        
+        // Fix layout on resize
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 1024) {
+                navMenu.style.display = ''; // Reset inline style so desktop flex applies
+            }
+            if (typeof ScrollTrigger !== 'undefined') {
+                setTimeout(() => ScrollTrigger.refresh(), 100);
+            }
+        });
     }
 
     // Lazy load images
