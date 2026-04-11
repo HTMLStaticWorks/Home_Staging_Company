@@ -51,9 +51,9 @@ document.addEventListener('DOMContentLoaded', () => {
     function updateIcon(theme) {
         toggleBtns.forEach(btn => {
             if (theme === 'dark') {
-                btn.innerHTML = '☀️'; // Switch to light icon
+                btn.innerHTML = '<i class="fas fa-sun"></i>'; // Switch to light icon
             } else {
-                btn.innerHTML = '🌙'; // Switch to dark icon
+                btn.innerHTML = '<i class="fas fa-moon"></i>'; // Switch to dark icon
             }
         });
     }
