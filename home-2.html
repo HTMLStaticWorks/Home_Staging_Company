@@ -47,22 +47,46 @@
             box-shadow: 0 20px 40px rgba(0,0,0,0.08);
         }
 
-        @media (max-width: 991px) {
+        @media (max-width: 1024px) {
             .split-hero {
                 flex-direction: column-reverse;
                 min-height: auto;
-                padding-top: 6rem;
+                padding-top: 8rem;
+                padding-bottom: 4rem;
+                text-align: center;
+                gap: 2rem;
             }
 
             .split-hero-img {
                 width: calc(100% - 3rem);
-                height: 50vh;
+                max-width: 900px;
+                height: 480px;
                 margin: 0 auto;
-                margin-right: auto;
+                object-fit: cover;
+                border-radius: 24px;
+                object-position: center;
             }
 
             .split-hero-content {
-                padding: 2rem 1.5rem;
+                padding: 1rem 1.5rem;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .split-hero-content .max-w-md {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .split-hero-content .d-flex {
+                justify-content: center;
+            }
+
+            .split-hero-content .row {
+                justify-content: center;
+                width: 100%;
+                max-width: 600px;
             }
         }
 
@@ -163,6 +187,36 @@
         }
 
         /* Package Cards */
+        .package-img-wrap {
+            height: 320px;
+            overflow: hidden;
+            width: 100%;
+        }
+
+        @media (max-width: 1024px) {
+            .package-img-wrap {
+                height: 350px;
+            }
+        }
+
+        @media (max-width: 991px) {
+            .package-img-wrap {
+                height: 480px; /* Better for full-width landscape image on tablets */
+            }
+        }
+
+        @media (max-width: 768px) {
+            .package-img-wrap {
+                height: 420px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .package-img-wrap {
+                height: 320px;
+            }
+        }
+
         .package-card {
             background: var(--surface-color);
             border-radius: var(--radius-lg);
@@ -598,7 +652,7 @@
                 <!-- Package 1 -->
                 <div class="col-lg-4 fade-up stagger-item">
                     <div class="package-card glass-card shadow-sm p-0 border-0 transition-slow mb-4">
-                        <div class="img-reveal-wrap overflow-hidden" style="height: 320px;">
+                        <div class="img-reveal-wrap package-img-wrap">
                             <img src="assets/images/design-consultation.png" alt="Strategic Consultation"
                                 class="w-100 h-100 object-fit-cover hover-scale">
                         </div>
@@ -626,7 +680,7 @@
                 <!-- Package 2 -->
                 <div class="col-lg-4 fade-up stagger-item">
                     <div class="package-card glass-card shadow-sm p-0 border-0 transition-slow mb-4">
-                        <div class="img-reveal-wrap overflow-hidden" style="height: 320px;">
+                        <div class="img-reveal-wrap package-img-wrap">
                             <img src="assets/images/package-standard.png" alt="Premium Staging"
                                 class="w-100 h-100 object-fit-cover hover-scale">
                         </div>
@@ -654,7 +708,7 @@
                 <!-- Package 3 -->
                 <div class="col-lg-4 fade-up stagger-item">
                     <div class="package-card glass-card shadow-sm p-0 border-0 transition-slow mb-4">
-                        <div class="img-reveal-wrap overflow-hidden" style="height: 320px;">
+                        <div class="img-reveal-wrap package-img-wrap">
                             <img src="assets/images/package-platinum.png" alt="Elite Estate"
                                 class="w-100 h-100 object-fit-cover hover-scale">
                         </div>
@@ -696,13 +750,13 @@
                     <div
                         class="testimonial-card glass-card p-5 border-0 shadow-lg position-relative overflow-hidden text-center">
                         <i class="fa fa-quote-right position-absolute top-0 end-0 m-5"
-                            style="font-size: 5rem; color: var(--accent-color); opacity: 0.05 !important;"></i>
+                            style="font-size: 5rem; color: var(--accent-color); opacity: 0.12 !important;"></i>
                         <div class="rating mb-4 text-accent justify-content-center d-flex">
                             <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i
                                 class="fa fa-star"></i><i class="fa fa-star"></i>
                         </div>
                         <p class="h4 mb-5"
-                            style="font-family: var(--font-body); font-style: italic; line-height: 1.6; font-weight: normal;">
+                            style="font-family: var(--font-body); font-style: italic; line-height: 1.6; font-weight: normal; color: var(--text-primary);">
                             "Lumina completely changed the game for our luxury listings. The attention to architectural
                             detail is unmatched. Our last three staged properties sold in under 10 days for well over
                             asking price."</p>
@@ -710,9 +764,10 @@
                             <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=100&h=100"
                                 alt="Client" class="rounded-circle"
                                 style="width: 70px; height: 70px; border: 3px solid var(--accent-color); padding: 3px;">
-                            <div>
-                                <h5 class="mb-1">Sarah Jenkins</h5>
-                                <p class="text-secondary text-sm mb-0">Senior Associate, Berkshire Hathaway</p>
+                            <div class="text-center">
+                                <span class="text-accent text-xs uppercase font-weight-600 d-block mb-1" style="letter-spacing: 1.5px;">Client</span>
+                                <h5 class="mb-1" style="color: var(--text-primary); font-weight: 700;">Sarah Jenkins</h5>
+                                <p class="text-sm mb-0" style="color: #4B5563; font-weight: 500;">Senior Associate, Berkshire Hathaway</p>
                             </div>
                         </div>
                     </div>
